@@ -142,7 +142,7 @@ jobs:
           mkdir ./public
           cp TeX_Outputs/main.pdf public/LastLocallyCompiled.pdf
           cp *.tex public/
-          cp -r Chapters public/
+          cp -r Content public/
           cp -r TeX_Setup public/
           cd public/
           pdflatex main.tex
