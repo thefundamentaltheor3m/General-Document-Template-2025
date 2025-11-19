@@ -3,6 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % `sorry`
+% oh wow (says Teresa)
 
 \newcommand{\sorry}{\textcolor{red}{\texttt{sorry}}}
 
@@ -19,6 +20,10 @@
       markings,
       mark=at position #1 with {\arrow{>}}},postaction={decorate}
 }}
+
+\newcommand{\labelledpoint}[5]{ % Takes x coord, y coord, label x-position relative to point, label y-position relative to point, label text as arguments
+    \node [label={[shift={(#3,#4)}]#5}] at (#1, #2) {$\bullet$};
+}
 
 \newenvironment{cd}{
     \begin{equation} \begin{tikzcd}
@@ -98,6 +103,9 @@
 
 \newcommand{\inj}{\hookrightarrow}
 \newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\iso}{\xrightarrow{\sim}}
+
+\newcommand{\of}[1]{\!\parenth{#1}}
 
 % CALCULUS:
 
@@ -168,15 +176,14 @@
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\calB}{\mathcal{B}}
 \newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
 \newcommand{\sigmaof}[1]{\sigma\!\parenth{#1}}
 \newcommand{\psiof}[1]{\psi\!\parenth{#1}}
 
-\newcommand{\vol}[1]{\operatorname{vol}\!\parenth{#1}}
-
 % Intervals
 
-\newcommand{\oc}[2]{\left(#1, #2\right]}
-\newcommand{\co}[2]{\left[#1, #2\right)}
+\newcommand{\oc}[1]{\left(#1\right]}
+\newcommand{\co}[1]{\left[#1\right)}
 
 % GROUPS/ALGEBRA IN GENERAL:
 
@@ -222,7 +229,7 @@
 \newcommand{\integers}{\mathbb{Z}}
 \newcommand{\complex}{\mathbb{C}}
 
-\newcommand{\F}{\mathbb{F}}
+% \newcommand{\F}{\mathbb{F}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\real}
 \newcommand{\N}{\naturalnum}
@@ -235,39 +242,25 @@
 \newcommand{\psup}[1]{\sup\!\parenth{#1}}
 \newcommand{\pinf}[1]{\inf\!\parenth{#1}}
 
+\newcommand{\Powset}[1]{\mathcal{P}\of{#1}}
+\newcommand{\F}{\mathcal{F}}
+
 % LOGIC:
 
 \newcommand{\ergo}{\therefore}
 \newcommand{\bcos}{\because}
 \newcommand{\st}{\text{ s.t. }}
 
-% ---------------- LIE ALGEBRAS ----------------
+% TOPOLOGY
 
-\newcommand{\liebrac}{\brac{\cdot, \cdot}}
+\renewcommand{\bar}{\overline}
+\newcommand{\ol}[1]{\overline{#1}}
 
-\newcommand{\gl}[1]{\mathfrak{gl}\!\parenth{#1}}
-\renewcommand{\sl}[1]{\mathfrak{sl}\!\parenth{#1}}
-\renewcommand{\t}[1]{\mathfrak{t}\!\parenth{#1}}
-\newcommand{\ad}{\operatorname{ad}}
-\newcommand{\pad}[1]{\ad\!\parenth{#1}}
-\newcommand{\Der}[1]{\operatorname{Der}\!\parenth{#1}}
-\renewcommand{\r}{\mathfrak{r}}
-\renewcommand{\u}[1]{\mathfrak{u}\!\parenth{#1}}
-\newcommand{\kof}[1]{K\!\parenth{#1}}
-\newcommand{\g}{\mathfrak{g}}
+\newcommand{\eps}{\varepsilon}
 
-% CW1
+\newcommand{\nhds}{\mathcal{N}}
+\newcommand{\nbhds}{\mathcal{N}}
 
-\newcommand{\NKL}{N_K\!\parenth{L}}
-\newcommand{\CKL}{C_K\!\parenth{L}}
-
-% --------------- ELLIPTIC CURVES --------------
-
-\renewcommand{\P}{\mathbb{P}}
-\newcommand{\A}{\mathbb{A}}
-\renewcommand{\O}{\mathcal{O}}
-\newcommand{\tors}{\operatorname{tors}}
-\newcommand{\Eof}[1]{E\!\parenth{#1}}
-\newcommand{\Etors}[1]{\Eof{#1}_{\tors}}
-\newcommand{\Ebar}[1]{\overline{E}\!\parenth{#1}}
-\newcommand{\yt}{\tilde{y}}
+\newcommand{\ssq}{\subseteq}
+\newcommand{\sse}{\subseteq}
+\newcommand{\ve}{\eps}
