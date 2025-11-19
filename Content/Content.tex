@@ -1,0 +1,63 @@
+\section{A Generic Section}
+
+Here is how text looks in this section.
+
+\lipsum[1]
+
+This should tell you how the line spacing, headers, and paragraph spacing look in this template.
+
+\section{Another Section}
+
+I don't usually use this template for lecture notes: I change my \verb|\documentclass| to \verb|book| and usually use \verb|\chapter|s instead of \verb|\section|s.
+
+\subsection{A Subsection}
+
+This is a subsection. These usually appear in a table of contents.
+
+\subsection{Convergence of a Sequence}
+
+We begin by defining a sequence.
+
+\begin{boxdefinition}[Sequence]
+    A \textbf{sequence} is a function $f: \N \to \R$.
+\end{boxdefinition}
+
+We can define what it means for a sequence to converge to a number $L \in \R$.
+
+\begin{boxdefinition}[Convergence]
+    A sequence $f: \N \to \R$ \textbf{converges} to a number $L \in \R$ if for all $\varepsilon > 0$, there exists $N \in \N$ such that for all $n \geq N$, $\abs{f(n) - L} < \varepsilon$.
+\end{boxdefinition}
+
+I have custom commands like \verb|\abs{}| and \verb|\parenth{}| for delimiters that resize automatically to the size of the content inside them.
+
+\begin{boxexample}
+    \verb|\parenth{\frac{a}{b}}| looks like this:
+    \begin{align*}
+        \parenth{\frac{a}{b}}
+    \end{align*}
+\end{boxexample}
+
+You can also use my boxed environments. Find them in \verb|TeX_Setup/environments.tex|.
+
+\begin{boxtheorem}[Bolzano-Weierstrass]
+    Every bounded sequence has a convergent subsequence.
+\end{boxtheorem}
+
+This is a super cool theorem! First year analysis is goated.
+
+Here's my favourite algebra theorem.
+
+\begin{boxtheorem}[First Isomorphism Theorem]
+    Let $G$ and $H$ be groups and let $\varphi: G \to H$ be a group homomorphism. We have an isomorphism
+    \begin{align*}
+        \quotient{G}{\pker{f}} \cong \pim{f}
+    \end{align*}
+\end{boxtheorem}
+
+\section{Concluding Remarks}
+
+Play around! Have fun! Look at all my custom shortcuts and environments. Keep the ones you want and get rid of the rest. The world is your oyster!
+
+\section{Generic Text}
+
+\lipsum
